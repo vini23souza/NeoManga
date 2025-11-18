@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeoManga - Protótipo Simples</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="logo">NeoManga</h1>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="#" title="Buscar"><i class="fas fa-search"></i></a>
+      <a href="#" title="Perfil"><i class="fas fa-user"></i></a>
+      <button class="dark-mode-toggle" title="Modo Escuro/Claro" aria-label="Alternar modo escuro">
+        <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <aside class="sidebar" aria-label="Navegação lateral">
+      <h2>Navegação</h2>
+      <ul>
+        <li><a href="#"><i class="fas fa-house"></i> Início</a></li>
+        <li><a href="#"><i class="fas fa-heart"></i> Favoritos</a></li>
+        <li><a href="#"><i class="fas fa-clock-rotate-left"></i> Histórico</a></li>
+        <li><a href="#"><i class="fas fa-layer-group"></i> Gêneros</a></li>
+      </ul>
+    </aside>
+
+    <section class="manga-grid-section">
+      <h2>Mangás em Destaque</h2>
+      <div class="manga-grid">
+
+        <!-- Card 1 -->
+        <div class="manga-card" data-title="Solo Leveling Vol. 1">
+          <button class="favorite-btn" title="Favoritar">
+            <i class="fas fa-heart"></i>
+          </button>
+          <img src="https://m.media-amazon.com/images/I/71R28xVzBGL._AC_UF894,1000_QL80_.jpg" alt="Capa do mangá Solo Leveling Vol. 1" />
+          <p>Solo Leveling Vol. 1</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="manga-card" data-title="Jujutsu Kaisen Vol. 1">
+          <button class="favorite-btn" title="Favoritar">
+            <i class="fas fa-heart"></i>
+          </button>
+          <img src="https://m.media-amazon.com/images/I/81xH6C39QpL._AC_UF894,1000_QL80_.jpg" alt="Capa do mangá Jujutsu Kaisen Vol. 1" />
+          <p>Jujutsu Kaisen Vol. 1</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="manga-card" data-title="One Piece Vol. 1">
+          <button class="favorite-btn" title="Favoritar">
+            <i class="fas fa-heart"></i>
+          </button>
+          <img src="https://m.media-amazon.com/images/I/71I26D+V5xL._AC_UF894,1000_QL80_.jpg" alt="Capa do mangá One Piece Vol. 1" />
+          <p>One Piece Vol. 1</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="manga-card" data-title="Spy x Family Vol. 1">
+          <button class="favorite-btn" title="Favoritar">
+            <i class="fas fa-heart"></i>
+          </button>
+          <img src="https://m.media-amazon.com/images/I/81dG2r5q8CL._AC_UF894,1000_QL80_.jpg" alt="Capa do mangá Spy x Family Vol. 1" />
+          <p>Spy x Family Vol. 1</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="manga-card" data-title="The Beginning After The End Vol. 1">
+          <button class="favorite-btn" title="Favoritar">
+            <i class="fas fa-heart"></i>
+          </button>
+          <img src="https://m.media-amazon.com/images/I/91tMh9r20pL._AC_UF894,1000_QL80_.jpg" alt="Capa do mangá The Beginning After The End Vol. 1" />
+          <p>The Beginning After The End Vol. 1</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 NeoManga. Projeto Educacional.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

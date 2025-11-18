@@ -1,0 +1,41 @@
+<script>
+  function getQueryParam(name) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(name);
+  }
+
+  const obra = getQueryParam('obra') || 'Solo Leveling Vol. 1';
+  const tituloEl = document.getElementById('titulo-obra');
+  const coverEl = document.getElementById('reader-cover');
+
+  fetch('capitulos.json')
+    .then(res => {
+      if (!res.ok) throw new Error('Não foi possível carregar capa');
+      return res.json();
+    })
+    .then(data => {
+      if (!data[obra]) {
+        tituloEl.textContent = 'Obra não encontrada';
+        coverEl.innerHTML = '<p style="color: var(--text-secondary);">Verifique o nome digitado.</p>';
+        return;
+      }
+
+      tituloEl.textContent = obra;
+      const capa = data[obra].capa;
+
+      coverEl.innerHTML = '';
+      if (capa) {
+        const img = document.createElement('img');
+        img.src = capa;
+        img.alt = Capa de ${obra};
+        coverEl.appendChild(img);
+      } else {
+        coverEl.innerHTML = '<p style="color: var(--text-secondary);">Esta obra não possui capa.</p>';
+      }
+    })
+    .catch(err => {
+      tituloEl.textContent = 'Erro ao carregar';
+      coverEl.innerHTML = '<p style="color: var(--text-secondary);">Confira se o arquivo contém erros.</p>';
+      console.error(err);
+    });
+</script>

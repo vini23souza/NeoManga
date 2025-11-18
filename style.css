@@ -1,0 +1,158 @@
+/* ----------------------------------- */
+/* 1. RESET E VARIÁVEIS (Dark Mode Padrão) */
+/* ----------------------------------- */
+
+:root {
+    --background-color: #121212; 
+    --surface-color: #1e1e1e;   
+    --text-color: #ffffff;      
+    --text-secondary: #aaaaaa;   
+    --primary-color: #ff5722;    
+    --header-height: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* ----------------------------------- */
+/* 2. LAYOUT E NAVEGAÇÃO */
+/* ----------------------------------- */
+
+.header {
+    background-color: var(--surface-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: var(--header-height);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.logo {
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+.nav a, .nav button {
+    color: var(--text-color);
+    font-size: 1.2em;
+    margin-left: 15px;
+    padding: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    padding-top: 20px;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: var(--surface-color);
+    margin-right: 20px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.sidebar h2 {
+    color: var(--text-secondary);
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar a {
+    color: var(--text-color);
+    display: block;
+    padding: 8px 10px;
+    border-radius: 4px;
+}
+
+.sidebar i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.manga-grid-section {
+    flex-grow: 1; 
+    padding-right: 20px;
+}
+
+/* 🚨 Demonstração de Organização */
+.manga-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    gap: 20px;
+}
+
+.manga-card {
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.manga-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    color: var(--text-secondary);
+    font-size: 0.8em;
+}
+
+/* ----------------------------------- */
+/* 3. ESTILOS DO MODO CLARO (Ativado pelo JavaScript) */
+/* ----------------------------------- */
+
+body.light-mode {
+    --background-color: #f0f0f5; 
+    --surface-color: #ffffff;   
+    --text-color: #333333;      
+    --text-secondary: #666666;   
+    --primary-color: #e53935;    
+}
+
+body.light-mode a {
+    color: var(--primary-color);
+}
+
+body.light-mode .header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
